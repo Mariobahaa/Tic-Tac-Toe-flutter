@@ -32,7 +32,7 @@ class TicTacToe extends StatelessWidget {
         '/': (context) => HomeScreen(),
         '/game': (context) => GameScreen('Y'),
         '/side': (context) => ChooseSide(),
-        '/winner': (context) => WinnerScreen(),
+        '/winner': (context) => WinnerScreen('X'),
       },
     );
   }
