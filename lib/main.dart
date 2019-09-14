@@ -30,7 +30,7 @@ class TicTacToe extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        '/game': (context) => GameScreen(),
+        '/game': (context) => GameScreen('Y'),
         '/side': (context) => ChooseSide(),
         '/winner': (context) => WinnerScreen(),
       },
