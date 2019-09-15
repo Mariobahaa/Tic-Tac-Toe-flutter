@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/Screens/gameScreen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -77,7 +78,8 @@ class HomeScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/game');
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => GameScreen('Y')));
                 },
                 color: Colors.red,
                 child: Padding(

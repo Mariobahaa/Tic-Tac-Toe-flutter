@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'gameScreen.dart';
+import 'package:tic_tac_toe/Screens/gameScreen.dart';
 
 class ChooseSide extends StatelessWidget {
   @override
@@ -50,8 +49,10 @@ class ChooseSide extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/game',
-                            arguments: GameScreen('X'));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GameScreen('X')));
                       }),
                 ),
               ),
@@ -72,8 +73,10 @@ class ChooseSide extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/game',
-                            arguments: GameScreen('O'));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GameScreen('O')));
                       }),
                 ),
               ),

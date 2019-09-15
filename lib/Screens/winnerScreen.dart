@@ -43,26 +43,6 @@ class WinnerScreen extends StatelessWidget {
                       }),
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0)),
-                      color: Color(0xFF27AAE1),
-                      child: Icon(
-                        Icons.refresh,
-                        size: 32,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(
-                          context,
-                          '/side',
-                        );
-                      }),
-                ),
-              ),
             ],
           ),
         ],

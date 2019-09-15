@@ -2,9 +2,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/chooseSide.dart';
-import 'Screens/gameScreen.dart';
 import 'Screens/homeScreen.dart';
-import 'Screens/winnerScreen.dart';
 
 void main() {
   runApp(TicTacToe());
@@ -30,9 +28,9 @@ class TicTacToe extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => HomeScreen(),
-        '/game': (context) => GameScreen('Y'),
+        //'/game': (context) => GameScreen('Y'),
         '/side': (context) => ChooseSide(),
-        '/winner': (context) => WinnerScreen('X'),
+        //'/winner': (context) => WinnerScreen(),
       },
     );
   }
