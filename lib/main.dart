@@ -13,7 +13,7 @@ class TicTacToe extends StatelessWidget {
 
   TicTacToe() {
     final player = AudioCache();
-    player.play('SOU.mp3');
+    player.play('Faded.mp3');
   }
 
   @override

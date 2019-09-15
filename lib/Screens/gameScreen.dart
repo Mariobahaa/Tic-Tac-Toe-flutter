@@ -100,13 +100,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -149,13 +178,43 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -198,13 +257,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -257,13 +345,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -306,13 +423,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -355,13 +501,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -413,13 +588,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -462,13 +666,42 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
+                          }
 
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }
@@ -511,13 +744,41 @@ class _GameBoardState extends State<GameBoard> {
                                         WinnerScreen(currentPlayer)));
                             gameCore.initializeBoard(board);
                             gameCore.color(colorBoard);
-                          } else
+                          } else {
+                            if (gameCore.tie(board)) {
+                              gameCore.initializeBoard(board);
+                              gameCore.color(colorBoard);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          WinnerScreen('Noone')));
+                            }
                             changePlayer();
-
+                          }
                           if (user != 'Y') {
                             Timer(Duration(seconds: 1), () {
                               gameCore.playAI();
-                              changePlayer();
+                              if (gameCore.validate(board, currentPlayer)) {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            WinnerScreen(currentPlayer)));
+                                gameCore.initializeBoard(board);
+                                gameCore.color(colorBoard);
+                              } else {
+                                if (gameCore.tie(board)) {
+                                  gameCore.initializeBoard(board);
+                                  gameCore.color(colorBoard);
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              WinnerScreen('Noone')));
+                                }
+                                changePlayer();
+                              }
                             });
                           }
                         }

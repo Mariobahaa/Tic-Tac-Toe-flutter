@@ -45,6 +45,7 @@ flutter:
   assets:
     - assets/Tic-Tac-Toe-Game.ico
     - assets/SOU.mp3
+    - assets/Faded.mp3
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
