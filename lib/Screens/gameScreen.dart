@@ -76,14 +76,16 @@ class _GameBoardState extends State<GameBoard> {
   //check for tie
   //change player
   void tick(int i, int j) {
-    board[i][j] = currentPlayer;
-    colorBoard[i][j] = playerColor;
-    changeColor();
-    endGame();
-    if (AI) {
-      gameCore.playAI(board, currentPlayer, colorBoard, playerColor);
+    if (board[i][j] == ' ') {
+      board[i][j] = currentPlayer;
+      colorBoard[i][j] = playerColor;
       changeColor();
       endGame();
+      if (AI) {
+        gameCore.playAI(board, currentPlayer, colorBoard, playerColor);
+        changeColor();
+        endGame();
+      }
     }
   }
 
