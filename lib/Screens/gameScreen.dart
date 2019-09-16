@@ -100,8 +100,9 @@ class _GameBoardState extends State<GameBoard> {
       gameCore.color(colorBoard);
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => WinnerScreen('Noone')));
+    } else {
+      changePlayer();
     }
-    changePlayer();
   }
 
   @override
