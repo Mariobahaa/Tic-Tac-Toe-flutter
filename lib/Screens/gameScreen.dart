@@ -93,11 +93,13 @@ class _GameBoardState extends State<GameBoard> {
     if (done) {
       gameCore.initializeBoard(board);
       gameCore.color(colorBoard);
+      AI = false;
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => WinnerScreen(currentPlayer)));
     } else if (tie) {
       gameCore.initializeBoard(board);
       gameCore.color(colorBoard);
+      AI = false;
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => WinnerScreen('Noone')));
     } else {

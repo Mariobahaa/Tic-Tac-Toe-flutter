@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class GameCore {
@@ -140,6 +142,7 @@ class GameCore {
     int max = 0;
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
+        log(grid[i][j]);
         if (grid[i][j] > max) max = grid[i][j];
       }
     }
