@@ -107,19 +107,30 @@ class GameCore {
         notLike = 2 - (blank + like);
       }
       d1g = grade(like, notLike, blank); //row grade
-    } else if (r == 2 - c) {
+    }
+    if (r == 2 - c) {
       like = 0;
       notLike = 0;
       blank = 0;
+      //was [2-(i%3)]
       for (int i = r + 1; i <= r + 2; i++) {
-        if (board[i % 3][2 - (i % 3)] == symbol)
+        if (r == 1 && c == 1) {
+          /*print('i: ' +
+              (i % 3).toString() +
+              ' j: ' +
+              (2 - (i % 3)).toString() +
+              '\n');
+          print('board[i][j]: ' + board[i % 3][2 - (i % 3)]);*/
+        }
+        if (board == symbol)
           like++;
         else if (board[i % 3][2 - (i % 3)] == ' ') blank++;
         notLike = 2 - (blank + like);
       }
       d2g = grade(like, notLike, blank); //row grade
     }
-
+    //print("d1g: " + d1g.toString());
+    //print("d2g: " + d2g.toString());
     return rg + cg + d1g + d2g;
   }
 
@@ -140,8 +151,14 @@ class GameCore {
     int max = 0;
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
-        //log(grid[i][j]);
+        /* print('i, ' +
+            i.toString() +
+            ' j ' +
+            j.toString() +
+            ' points ' +
+            grid[i][j].toString());*/
         if (grid[i][j] > max) max = grid[i][j];
+        // print('max: ' + max.toString());
       }
     }
 
