@@ -12,13 +12,18 @@ class WinnerScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            winner + ' Wins!',
-            style: TextStyle(
-              fontSize: 100.0,
-              fontFamily: 'PermanentMarker',
-              color: Color(0xFF27AAE1),
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Center(
+              child: Text(
+                winner + ' Wins!',
+                style: TextStyle(
+                  fontSize: 100.0,
+                  fontFamily: 'PermanentMarker',
+                  color: Color(0xFF27AAE1),
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           Row(

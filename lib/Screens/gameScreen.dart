@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/Screens/winnerScreen.dart';
 import 'package:tic_tac_toe/game_core.dart';
@@ -93,17 +95,23 @@ class _GameBoardState extends State<GameBoard> {
     bool done = gameCore.validate(board, currentPlayer);
     bool tie = gameCore.tie(board);
     if (done) {
-      gameCore.initializeBoard(board);
-      gameCore.color(colorBoard);
+      /*gameCore.initializeBoard(board);
+      gameCore.color(colorBoard);*/
       AI = false;
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => WinnerScreen(currentPlayer)));
+      Timer(Duration(seconds: 1), () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => WinnerScreen(currentPlayer)));
+      });
     } else if (tie) {
-      gameCore.initializeBoard(board);
-      gameCore.color(colorBoard);
+      /*gameCore.initializeBoard(board);
+      gameCore.color(colorBoard);*/
       AI = false;
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => WinnerScreen('Noone')));
+      Timer(Duration(seconds: 1), () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => WinnerScreen('Noone')));
+      });
     } else {
       changePlayer();
     }
